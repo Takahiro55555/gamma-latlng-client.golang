@@ -52,6 +52,28 @@ func TestExtractUnduplicateTopics(t *testing.T) {
 				subscribeTopics:   []string{""},
 			},
 		},
+		{
+			name: "Test 04",
+			args: args{
+				currentTopics: []string{"/1/2/#", "/1/3/#"},
+				newTopics:     []string{"/1/#"},
+			},
+			want: want{
+				unsubscribeTopics: []string{"/1/2/#", "/1/3/#"},
+				subscribeTopics:   []string{"/1/#"},
+			},
+		},
+		{
+			name: "Test 05",
+			args: args{
+				currentTopics: []string{"/1/2/#", "/1/3/#"},
+				newTopics:     []string{"/1/2/#", "/1/3/4/#"},
+			},
+			want: want{
+				unsubscribeTopics: []string{"", "/1/3/#"},
+				subscribeTopics:   []string{"", "/1/3/4/#"},
+			},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

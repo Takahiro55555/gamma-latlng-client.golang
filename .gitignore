@@ -4,5 +4,7 @@
 
 *.out
 *.exe
+*.csv
+!1.csv
 
 cover.html
