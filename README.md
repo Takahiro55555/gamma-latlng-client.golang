@@ -1,3 +1,3 @@
-![Test golang](https://github.com/Takahiro55555/location-based-mqtt-client.golang/workflows/Test%20golang/badge.svg)
+[![Test golang](https://github.com/Takahiro55555/gamma-latlng-client.golang/actions/workflows/test.yml/badge.svg)](https://github.com/Takahiro55555/gamma-latlng-client.golang/actions/workflows/test.yml)
 
-# location-based-mqtt-client.golang
+# gamma-latlng-client.golang
